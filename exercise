@@ -1,0 +1,27 @@
+function isPrime(num) {
+
+    for (let i = 2; i < num; i++)
+        if (num % i == 0)
+            return false;
+
+    return true;
+}
+
+function printPrime(num) {
+    const arr = [];
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i)) {
+            arr.push(i + " ");
+            let sum = arr.reduce(myFunction);
+
+            function myFunction(total, value) {
+                return total + value
+
+            }
+        }
+
+
+
+    }
+}
+console.log(printPrime(12));
